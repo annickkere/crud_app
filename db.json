@@ -1,0 +1,22 @@
+{
+    "clients": [
+        {
+            "id":1,
+            "nom":"Bala",
+            "adresse":"Koudougou",
+            "tel":"54123612"
+        },
+        {
+            "id":2,
+            "nom":"Poko",
+            "adresse":"Manga",
+            "tel":"78549636"
+        },
+        {
+            "id":3,
+            "nom":"Rama",
+            "adresse":"Boromo",
+            "tel":"63214525"
+        }
+    ]
+}
