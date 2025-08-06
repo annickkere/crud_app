@@ -25,12 +25,20 @@ const ClientDetail = () => {
     };
 
     return (
-        <div>
-            <h1>Détails du client</h1>
-            <p>Nom du client: {client.nom}</p>
-            <p>Adresse: {client.adresse}</p>
-            <p>Téléphone: {client.tel}</p>
-            <button onClick={handleRetour}>Retour à la liste</button>
+        <div className="d-flex justify-content-center align-items-center m-5">
+            <div className="border p-4 rounded">
+                <h1 className="text-center">Détails du client</h1>
+                <div className="border rounded mb-3">
+                    <p className="m-2">Nom du client: {client.nom}</p>
+                </div>
+                <div className="border rounded mb-3">
+                    <p className="m-2">Adresse: {client.adresse}</p>
+                </div>
+                <div className="border rounded mb-3">
+                    <p className="m-2">Téléphone: {client.tel}</p>
+                </div>
+                <button className="btn btn-success m-2 text-center" onClick={handleRetour}>Retour à la liste</button>
+            </div>
         </div>
     );
 };

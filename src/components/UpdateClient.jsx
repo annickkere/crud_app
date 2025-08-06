@@ -23,25 +23,33 @@ const UpdateClient = () => {
     };
 
     return (
-        <div>
-            <h1>Mettre à jour le client</h1>
-            <form>
-                <label>Nom du client:</label>
-                <input type="text" value={client.nom} onChange={(e) => setClient({
-                    ...client,
-                    nom: e.target.value
-                })} /><br />
-                <label>Adresse:</label>
-                <input type="text" value={client.adresse} onChange={(e) => setClient({
-                    ...client, adresse: e.target.value
-                })} /><br />
-                <label>Téléphone:</label>
-                <input type="text" value={client.tel} onChange={(e) => setClient({
-                    ...client,
-                    tel: e.target.value
-                })} /><br />
-                <button onClick={handleUpdate}>Mettre à jour</button>
-            </form>
+        <div className="d-flex justify-content-center align-items-center m-5">
+            <div className="border p-4 rounded">
+                <h1 className="text-center">Mettre à jour le client</h1>
+                <form className="text-center">
+                    <div className="form-group row col-md m-3">
+                        <label className="fw-bold">Nom du client:</label>
+                        <input type="text" value={client.nom} className="form-control form-control-lg text-center" onChange={(e) => setClient({
+                            ...client,
+                            nom: e.target.value
+                        })} />
+                    </div>
+                    <div className="form-group col-md m-3">
+                        <label className="fw-bold">Adresse:</label>
+                        <input type="text" value={client.adresse} className="form-control form-control-lg text-center" onChange={(e) => setClient({
+                            ...client, adresse: e.target.value
+                        })} />
+                    </div>
+                    <div className="form-group col-md m-3">
+                        <label className="fw-bold">Téléphone:</label>
+                        <input type="text" value={client.tel} className="form-control form-control-lg text-center" onChange={(e) => setClient({
+                            ...client,
+                            tel: e.target.value
+                        })} />
+                    </div>
+                    <button className="btn btn-success m-2 form-control-lg" onClick={handleUpdate}>Mettre à jour</button>
+                </form>
+            </div>
         </div>
     );
 };

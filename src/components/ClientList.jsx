@@ -22,18 +22,18 @@ const ClientList = () => {
         // axios.delete pour supprimer le client identifié par son "id" 
         await axios.delete(`http://localhost:3001/clients/${id}`);
         fetchData();
-    }; 
+    };
 
     return (
-        <div>
-            <h1> Liste des clients</h1>
-            <div>
-                <Link to="/clients/create">
+        <div className="container mt-4">
+            <h1 className="text-center mb-4"> Liste des clients</h1>
+            <div className="text-center mb-3">
+                <Link to="/clients/create" className="btn btn-success">
                     Ajouter
                 </Link>
             </div>
-            <table>
-                <thead>
+            <table className="table table-bordered table-hover text-center">
+                <thead className="table-dark fw-bold">
                     <tr>
                         <td>Nom</td>
                         <td>Adresse</td>
@@ -41,7 +41,7 @@ const ClientList = () => {
                         <td>Opérations</td>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className="fw-normal">
                     {clients.map(
                         (
                             client
@@ -53,10 +53,10 @@ const ClientList = () => {
                                 <td>{client.adresse}</td>
                                 <td>{client.tel}</td>
                                 <td>
-                                    <Link to={`/clients/${client.id}/update`}>
-                                        <button>Modifier</button>
+                                    <Link to={`/clients/${client.id}/update`} className="m-2">
+                                        <button className="btn btn-primary">Modifier</button>
                                     </Link>
-                                    <button onClick={() => handleDelete(client.id)}>
+                                    <button onClick={() => handleDelete(client.id)} className="btn btn-danger">
                                         Supprimer
                                     </button>
                                 </td>
